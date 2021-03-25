@@ -57,7 +57,27 @@ class Chapter2 {
     }
 
     // Chapter 2 Milestone 4 method
-    void milestone4(int seconds) {
+    void milestone4(int numSeconds) {
+        int secondsInYear = (60 * 60 * 24 * 365);
+        int secondsInDay = (60 * 60 * 24);
+        int secondsInHour = (60 * 60);
+
+        int years = numSeconds / secondsInYear;
+        int daySeconds = numSeconds % secondsInYear;
+        int days = daySeconds / secondsInDay;
+        int hourSeconds = daySeconds % secondsInDay;
+        int hours = hourSeconds / secondsInHour;
+        int minuteSeconds = hourSeconds % secondsInHour;
+        int minutes = minuteSeconds / 60;
+        int seconds = minuteSeconds % 60;
+
+        // 60 sec 60 min 24 hours 365 days
+        System.out.println("Years: " + years);
+        System.out.println("Days: " + days);
+        System.out.println("Hours: " + hours);
+        System.out.println("Minutes: " + minutes);
+        System.out.println("Seconds: " + seconds);
+
     }
 
 }
