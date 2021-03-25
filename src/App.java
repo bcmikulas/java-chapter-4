@@ -11,6 +11,8 @@ class Chapter2 {
 
     // Declare the Chapter 2 Milestone 2 method here
     void milestone2(double num1) {
+        System.out.println((int) num1);
+        System.out.println((int) ((num1 - (int) num1) * 100));
     }
 
     // Declare the Chapter 2 Milestone 3 method here
@@ -86,6 +88,7 @@ public class App {
         chapter2.milestone1(num2_1);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 2 **");
+        System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
         System.out.println("Please input a decimal number:");
         double num2_2 = scanner.nextDouble();
         // Call the Chapter 2 Milestone 2 method here
