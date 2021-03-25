@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Chapter3 {
     // Chapter 3 Milestone 1
@@ -16,7 +17,8 @@ public class Chapter3 {
                 break;
             }
         }
-    }
+        System.out.println();
+    } // end Milestone 1
 
     // Declare the Chapter 3 Milestone 2 method here
     public void Milestone2(Scanner scanner) {
@@ -30,7 +32,8 @@ public class Chapter3 {
         int num1;
         String numStr; // user input
 
-        System.out.println("Enter some numbers:");
+        System.out.println("This method will average a series of given numbers.");
+        System.out.println("Enter several whole numbers (-1 to calculate):");
         do {
             while (true) {
                 numStr = scanner.next();
@@ -54,11 +57,60 @@ public class Chapter3 {
         }
     } // end Milestone2
 
-    public void Milestone3(int num1, int num2, int answer) {
-        if (num1 * num2 == answer)
-            System.out.println("Correct!");
-        else
-            System.out.println("Incorrect, the answer was " + (num1 * num2));
+    // public void Milestone3(int num1, int num2, int answer) {
+    public void Milestone3(Scanner scanner) {
+        int min = 1;
+        int max = 12;
+        int randNum1 = ThreadLocalRandom.current().nextInt(min, max + 1);
+        int randNum2 = ThreadLocalRandom.current().nextInt(min, max + 1);
+        int userGuess;
+        int product;
+        String numStr; // user input
+
+        product = randNum1 * randNum2;
+
+        System.out.println(randNum1);
+        System.out.println(randNum2);
+
+        System.out.println("What is the product of these two numbers?");
+        for (int i = 2; i > -1; i--)
+        {
+            // get user input
+            while (true) {
+                numStr = scanner.next();
+                try {
+                    userGuess = Integer.parseInt(numStr);
+                    break;
+                } catch (Exception e) {
+                    System.out.println("Invalid number.");
+                    continue;
+                }
+            }
+
+            if (product == userGuess) {
+                System.out.println("Correct!");
+                break;
+            }
+
+            // give user 3 attempts to guess correctly
+            if (i == 0) { // no attempts remaining
+                System.out.println("Incorrect. The answer was " + product + ".");
+                break;
+            } else if (i == 2) {
+                System.out.println("Incorrect. You have " + i + " attempts remaining.");
+            } else {
+                System.out.println("Incorrect. You have " + i + " attempt remaining.");
+            }
+        }
+
+
+
+
+
+        // if (num1 * num2 == answer)
+        //     System.out.println("Correct!");
+        // else
+        //     System.out.println("Incorrect, the answer was " + (num1 * num2));
     } // end Mileston3
 
 }

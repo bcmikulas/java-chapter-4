@@ -1,7 +1,6 @@
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 import java.util.Scanner;
-import java.util.concurrent.ThreadLocalRandom;
 
 class Chapter2 {
     void milestone1(int num) {
@@ -177,21 +176,13 @@ public class App {
         chapter3.Milestone1(num3_1a, num3_1b);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 2 **");
-        // Call the Chapter 3 Milestone 2 method here
+        // Call the Chapter 3 Milestone 2 method
         // method and all code is in the method in Chapter3.java
         chapter3.Milestone2(scanner);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 3 **");
-        int min = 1;
-        int max = 12;
-        int randNum1 = ThreadLocalRandom.current().nextInt(min, max + 1);
-        int randNum2 = ThreadLocalRandom.current().nextInt(min, max + 1);
-        System.out.println(randNum1);
-        System.out.println(randNum2);
-        System.out.println("What is the product of these two numbers?");
-        int num3_3 = scanner.nextInt();
-        // Call the Chapter 3 Milestone 3 method here
-        chapter3.Milestone3(randNum1, randNum2, num3_3);
+        // Call the Chapter 3 Milestone 3 method
+        chapter3.Milestone3(scanner);
 
         scanner.close();
     }
