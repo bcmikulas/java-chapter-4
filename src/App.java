@@ -155,31 +155,31 @@ public class App {
         System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
         System.out.println("Please input a decimal number:");
         BigDecimal num2_2a = scanner.nextBigDecimal();
-        // Call the Chapter 2 Milestone 2 method here
+        // Call the Chapter 2 Milestone 2 method
         chapter2.milestone2a(num2_2a);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 3 **");
-        // Call the Chapter 2 Milestone 3 method here
+        // Call the Chapter 2 Milestone 3 method
         chapter2.milestone3();
 
         System.out.println("\n** CHAPTER 2 MILESTONE 4 **");
         System.out.println("Enter a number for seconds:");
         int seconds = scanner.nextInt();
-        // Call the Chapter 2 Milestone 4 method here
+        // Call the Chapter 2 Milestone 4 method
         chapter2.milestone4(seconds);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 1 **");
         System.out.println("Enter two numbers:");
         int num3_1a = scanner.nextInt();
         int num3_1b = scanner.nextInt();
-        // Call the Chapter 3 Milestone 1 method here
+        // Call the Chapter 3 Milestone 1 method
         Chapter3 chapter3 = new Chapter3();
-        chapter3.milestone1(num3_1a, num3_1b);
+        chapter3.Milestone1(num3_1a, num3_1b);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 2 **");
         // Call the Chapter 3 Milestone 2 method here
-        // call method and place all code in the method in Chapter3.java
-        chapter3.milestone2(scanner);
+        // method and all code is in the method in Chapter3.java
+        chapter3.Milestone2(scanner);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 3 **");
         int min = 1;
@@ -191,7 +191,7 @@ public class App {
         System.out.println("What is the product of these two numbers?");
         int num3_3 = scanner.nextInt();
         // Call the Chapter 3 Milestone 3 method here
-        chapter3.milestone3(randNum1, randNum2, num3_3);
+        chapter3.Milestone3(randNum1, randNum2, num3_3);
 
         scanner.close();
     }
