@@ -10,11 +10,11 @@ class Chapter2 {
     }
 
     // Declare the Chapter 2 Milestone 2 method here
-    void milestone2(double num1, double num2) {
+    void milestone2(double num1) {
     }
 
     // Declare the Chapter 2 Milestone 3 method here
-    void milestone3(double num1) {
+    void milestone3() {
     }
 
     // Declare the Chapter 2 Milestone 4 method here
@@ -37,11 +37,12 @@ public class App {
     }
 
     // Declare the Chapter 1 Milestone 3 method here
-    static void chapter1milestone3() {
+    static void chapter1milestone3(double radius) {
     }
 
     public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
+
         System.out.println("** CHAPTER 1 MILESTONE 1 **");
         System.out.println("Please enter two numbers:");
         double num1_1a = scanner.nextDouble();
@@ -59,8 +60,8 @@ public class App {
         System.out.println("\n** CHAPTER 1 MILESTONE 3 **");
         System.out.print("Enter a radius: ");
         double radius = scanner.nextDouble();
-
         // Call the Chapter 1 Milestone 3 method here
+        chapter1milestone3(radius);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 1 **");
         System.out.println("Enter a Number:");
