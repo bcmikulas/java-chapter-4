@@ -26,14 +26,18 @@ class Chapter2 {
 public class App {
     static void chapter1milestone1(double num1, double num2) {
         System.out.print("Largest is: ");
-        if (num1 > num2)
+        if (num1 > num2) {
             System.out.println(num1);
-        else
+        } else {
             System.out.println(num2);
+        }
+        System.out.println();
     }
 
     // Declare the Chapter 1 Milestone 2 method here
-    static void chapter1milestone2(Double num1, Double num2) {
+    static void chapter1milestone2(double num1, double num2) {
+        System.out.println("The average is: " + String.format("%,.2f", (num1 + num2) / 2.0));
+        System.out.println();
     }
 
     // Declare the Chapter 1 Milestone 3 method here
@@ -94,12 +98,10 @@ public class App {
         Chapter3 chapter3 = new Chapter3();
         chapter3.milestone1(num3_1a, num3_1b);
 
-
         System.out.println("\n** CHAPTER 3 MILESTONE 2 **");
-          // Call the Chapter 3 Milestone 2 method here
-          // call method and place all code in the method in Chapter3.java
+        // Call the Chapter 3 Milestone 2 method here
+        // call method and place all code in the method in Chapter3.java
         chapter3.milestone2(scanner);
-        
 
         System.out.println("\n** CHAPTER 3 MILESTONE 3 **");
         int min = 1;
@@ -112,7 +114,6 @@ public class App {
         int num3_3 = scanner.nextInt();
         // Call the Chapter 3 Milestone 3 method here
         chapter3.milestone3(randNum1, randNum2, num3_3);
-
 
         scanner.close();
     }
