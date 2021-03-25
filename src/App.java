@@ -162,18 +162,22 @@ public class App {
         chapter2.milestone3();
 
         System.out.println("\n** CHAPTER 2 MILESTONE 4 **");
-        System.out.println("Enter a number for seconds:");
+        System.out.println("Enter a number of seconds:");
         int seconds = scanner.nextInt();
         // Call the Chapter 2 Milestone 4 method
         chapter2.milestone4(seconds);
 
-        System.out.println("\n** CHAPTER 3 MILESTONE 1 **");
-        System.out.println("Enter two numbers:");
-        int num3_1a = scanner.nextInt();
-        int num3_1b = scanner.nextInt();
-        // Call the Chapter 3 Milestone 1 method
+
+        // create Chapter3 object
         Chapter3 chapter3 = new Chapter3();
-        chapter3.Milestone1(num3_1a, num3_1b);
+
+        System.out.println("\n** CHAPTER 3 MILESTONE 1 **");
+        // System.out.println("Enter two numbers:");
+        // int num3_1a = scanner.nextInt();
+        // int num3_1b = scanner.nextInt();
+        // Call the Chapter 3 Milestone 1 method
+        // chapter3.Milestone1(num3_1a, num3_1b);
+        chapter3.Milestone1(scanner);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 2 **");
         // Call the Chapter 3 Milestone 2 method

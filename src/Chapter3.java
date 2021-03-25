@@ -3,16 +3,50 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class Chapter3 {
     // Chapter 3 Milestone 1
-    public void Milestone1(int num1, int num2) {
+    // public void Milestone1(int num1, int num2) {
+    public void Milestone1(Scanner scanner) {
+        String numStr; // user input
+        int num1; // user first number
+        int num2; // user second number
+
+        // ask user for 2 numbers and vaildate for correct type
+        System.out.println("Enter two numbers: ");
+
+        while (true) {
+            numStr = scanner.next();
+            try {
+                num1 = Integer.parseInt(numStr);
+                break;
+            } catch (Exception e) {
+                System.out.println("Invalid number!");
+                continue;
+            }
+        }
+        while (true) {
+            numStr = scanner.next();
+            try {
+                num2 = Integer.parseInt(numStr);
+                break;
+            } catch (Exception e) {
+                System.out.println("Invalid number!");
+                // Milestone 1
+                continue;
+            }
+        }
         if (num1 > num2) {
-            int temp = num1;
+            int temp = num1; // used to sort num1 and num2
             num1 = num2;
             num2 = temp;
         }
+
+        // loop through num1 until loop variable is divisible by num1
         for (int i = num1 + 1; i < num2; i++) {
+            // print even numbers between num1 and num2 toi the screen
             if (i % 2 == 0) {
                 System.out.print(i + " ");
             }
+            // check to see if the printed number is divisble by the num1
+            // if it is stop
             if (i % num1 == 0 && i != 0) {
                 break;
             }
@@ -73,8 +107,7 @@ public class Chapter3 {
         System.out.println(randNum2);
 
         System.out.println("What is the product of these two numbers?");
-        for (int i = 2; i > -1; i--)
-        {
+        for (int i = 2; i > -1; i--) {
             // get user input
             while (true) {
                 numStr = scanner.next();
@@ -103,14 +136,10 @@ public class Chapter3 {
             }
         }
 
-
-
-
-
         // if (num1 * num2 == answer)
-        //     System.out.println("Correct!");
+        // System.out.println("Correct!");
         // else
-        //     System.out.println("Incorrect, the answer was " + (num1 * num2));
+        // System.out.println("Incorrect, the answer was " + (num1 * num2));
     } // end Mileston3
 
 }
