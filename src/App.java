@@ -11,13 +11,13 @@ class Chapter2 {
             System.out.println("Odd");
     }
 
-    // Declare the Chapter 2 Milestone 2 method here
+    // Chapter 2 Milestone 2 method
     void milestone2(double num1) {
         System.out.println((int) num1);
         System.out.println((int) ((num1 - (int) num1) * 100));
     }
 
-    // Declare the Chapter 2 Milestone 2a method here
+    // Chapter 2 Milestone 2a - BigDecimal method
     void milestone2a(BigDecimal num1) {
         BigDecimal num2;
         BigDecimal num3;
@@ -33,11 +33,30 @@ class Chapter2 {
         System.out.println(num2.subtract(num3));
     }
 
-    // Declare the Chapter 2 Milestone 3 method here
+    // Chapter 2 Milestone 3 method
     void milestone3() {
+        String stringOfPrimes = "2 ";
+        int primesToFind = 100;
+        System.out.println("This will find all the prime numbers between 2 and 100.");
+
+        // loop contains 2 through primesToFind -
+        for (int y = 3; y <= primesToFind; y++) {
+            // loop for the numbers to divide into primesToFind
+            for (int x = 2; x < y; x++) {
+                if (y % x == 0) {
+                    break; // not prime
+                }
+                if (y == (x + 1) && y % x != 0) {
+                    stringOfPrimes += y + " ";
+                }
+            }
+        }
+        System.out.println("Prime numbers between 2 and " + primesToFind + " ");
+        System.out.println(stringOfPrimes + "");
+
     }
 
-    // Declare the Chapter 2 Milestone 4 method here
+    // Chapter 2 Milestone 4 method
     void milestone4(int seconds) {
     }
 
