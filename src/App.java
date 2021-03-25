@@ -1,3 +1,5 @@
+import java.math.BigDecimal;
+import java.math.RoundingMode;
 import java.util.Scanner;
 import java.util.concurrent.ThreadLocalRandom;
 
@@ -13,6 +15,22 @@ class Chapter2 {
     void milestone2(double num1) {
         System.out.println((int) num1);
         System.out.println((int) ((num1 - (int) num1) * 100));
+    }
+
+    // Declare the Chapter 2 Milestone 2a method here
+    void milestone2a(BigDecimal num1) {
+        BigDecimal num2;
+        BigDecimal num3;
+
+        // show the integer portion of number
+        System.out.println(num1.intValue());
+        // show only the 1st 2 decimal positions
+        // move decimal point 2 to the right and remove the rest of the decimals
+        num2 = num1.movePointRight(2).setScale(0, RoundingMode.DOWN);
+        // remove all decimals then move decimal point 2 to the right - makes 2 digits
+        // on leftside of decimal 0s
+        num3 = num1.setScale(0, RoundingMode.DOWN).movePointRight(2);
+        System.out.println(num2.subtract(num3));
     }
 
     // Declare the Chapter 2 Milestone 3 method here
@@ -93,6 +111,13 @@ public class App {
         double num2_2 = scanner.nextDouble();
         // Call the Chapter 2 Milestone 2 method here
         chapter2.milestone2(num2_2);
+
+        System.out.println("\n** CHAPTER 2 MILESTONE 2a - Big Decimal Version **");
+        System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
+        System.out.println("Please input a decimal number:");
+        BigDecimal num2_2a = scanner.nextBigDecimal();
+        // Call the Chapter 2 Milestone 2 method here
+        chapter2.milestone2a(num2_2a);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 3 **");
         // Call the Chapter 2 Milestone 3 method here
