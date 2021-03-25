@@ -24,6 +24,7 @@ class Chapter2 {
 }
 
 public class App {
+    // Chapter 1 Milestone 1 method
     static void chapter1milestone1(double num1, double num2) {
         System.out.print("Largest is: ");
         if (num1 > num2) {
@@ -34,14 +35,24 @@ public class App {
         System.out.println();
     }
 
-    // Declare the Chapter 1 Milestone 2 method here
+    // Chapter 1 Milestone 2 method
     static void chapter1milestone2(double num1, double num2) {
         System.out.println("The average is: " + String.format("%,.2f", (num1 + num2) / 2.0));
         System.out.println();
     }
 
-    // Declare the Chapter 1 Milestone 3 method here
+    // Chapter 1 Milestone 3 method
     static void chapter1milestone3(double radius) {
+        double circumference;
+        double area;
+        double pi = 3.14;
+
+        // calculate circumference and area and print
+        circumference = 2 * pi * radius;
+        area = pi * radius * radius;
+        System.out.println("Circumference: " + String.format("%.2f", circumference));
+        System.out.println("Area: " + String.format("%.2f", area));
+        System.out.println();
     }
 
     public static void main(String[] args) throws Exception {
