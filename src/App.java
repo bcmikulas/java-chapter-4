@@ -65,8 +65,8 @@ class Chapter2 {
                 }
             }
         }
-        System.out.println("Prime numbers between 2 and " + primesToFind + " ");
-        System.out.println(stringOfPrimes + "");
+        // System.out.println("Prime numbers between 2 and " + primesToFind + " ");
+        System.out.println(stringOfPrimes);
 
     }
 

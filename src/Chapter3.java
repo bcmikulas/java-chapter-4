@@ -5,34 +5,14 @@ public class Chapter3 {
     // Chapter 3 Milestone 1
     // public void Milestone1(int num1, int num2) {
     public void Milestone1(Scanner scanner) {
-        String numStr; // user input
         int num1; // user first number
         int num2; // user second number
 
         // ask user for 2 numbers and vaildate for correct type
-        System.out.println("Enter two numbers: ");
+        System.out.println("Enter two numbers and the program will show you the even numbers between them.");
+        num1 = ValidInput.ValidInteger(scanner, "1st number:", "Invalid Entry - please enter a whole number.");
+        num2 = ValidInput.ValidInteger(scanner, "2nd number:", "Invalid Entry - please enter a whole number.");
 
-        while (true) {
-            numStr = scanner.next();
-            try {
-                num1 = Integer.parseInt(numStr);
-                break;
-            } catch (Exception e) {
-                System.out.println("Invalid number!");
-                continue;
-            }
-        }
-        while (true) {
-            numStr = scanner.next();
-            try {
-                num2 = Integer.parseInt(numStr);
-                break;
-            } catch (Exception e) {
-                System.out.println("Invalid number!");
-                // Milestone 1
-                continue;
-            }
-        }
         if (num1 > num2) {
             int temp = num1; // used to sort num1 and num2
             num1 = num2;
@@ -64,21 +44,22 @@ public class Chapter3 {
         int count = 0; // count of numbers entered by user
         double avg; // will hold average of user enter variables
         int num1;
-        String numStr; // user input
+        // String numStr; // user input
 
         System.out.println("This method will average a series of given numbers.");
         System.out.println("Enter several whole numbers (-1 to calculate):");
         do {
-            while (true) {
-                numStr = scanner.next();
-                try {
-                    num1 = Integer.parseInt(numStr);
-                    break;
-                } catch (Exception e) {
-                    System.out.println("Invalid number.");
-                    continue;
-                }
-            }
+            num1 = ValidInput.ValidInteger(scanner, "+++", "Invalid Entry - please enter a positive whole number.");
+            // while (true) {
+            //     numStr = scanner.next();
+            //     try {
+            //         num1 = Integer.parseInt(numStr);
+            //         break;
+            //     } catch (Exception e) {
+            //         System.out.println("Invalid number.");
+            //         continue;
+            //     }
+            // }
             if (num1 >= 0) {
                 total += num1;
                 count++;
@@ -99,7 +80,7 @@ public class Chapter3 {
         int randNum2 = ThreadLocalRandom.current().nextInt(min, max + 1);
         int userGuess;
         int product;
-        String numStr; // user input
+        // String numStr; // user input
 
         product = randNum1 * randNum2;
 
@@ -109,16 +90,17 @@ public class Chapter3 {
         System.out.println("What is the product of these two numbers?");
         for (int i = 2; i > -1; i--) {
             // get user input
-            while (true) {
-                numStr = scanner.next();
-                try {
-                    userGuess = Integer.parseInt(numStr);
-                    break;
-                } catch (Exception e) {
-                    System.out.println("Invalid number.");
-                    continue;
-                }
-            }
+            userGuess = ValidInput.ValidInteger(scanner, "Your Guess:", "Invalid Entry - please enter a whole number.");
+            // while (true) {
+            //     numStr = scanner.next();
+            //     try {
+            //         userGuess = Integer.parseInt(numStr);
+            //         break;
+            //     } catch (Exception e) {
+            //         System.out.println("Invalid number.");
+            //         continue;
+            //     }
+            // }
 
             if (product == userGuess) {
                 System.out.println("Correct!");
@@ -136,10 +118,6 @@ public class Chapter3 {
             }
         }
 
-        // if (num1 * num2 == answer)
-        // System.out.println("Correct!");
-        // else
-        // System.out.println("Incorrect, the answer was " + (num1 * num2));
     } // end Mileston3
 
 }
