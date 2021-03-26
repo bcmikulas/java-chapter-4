@@ -3,17 +3,9 @@
 This homework for chapter 4 moves milestones created for previous chapters into classes as described below.
 
 ___
-## Folder Structure
-
-The workspace contains two folders by default, where:
-
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
-
-___
 ## Instructions
 
-Make a fork of this repository: [here](https://github.com/mlhaus/java-chapter-4).
+Make a fork of this repository: "hhtps://github.com/mlhaus/java-chapter-4" [here](https://github.com/mlhaus/java-chapter-4).
 
 Clone a copy to your computer.
 
@@ -22,6 +14,14 @@ Open App.java and Chapter3.java. Use and modify your Assignment code from Chapte
 - Create methods for Chapter 1 milestones in the App class. These methods must be declared static.
 - Create methods for Chapter 2 milestones in a Chapter2 class inside the App.java file.
 - Create methods for Chapter 3 milestones in a Chapter3 class inside the Chapter3.java file. These methods must be declared public.
+
+___
+## Folder Structure
+
+The workspace contains two folders by default, where:
+
+- `src`: the folder to maintain sources
+- `lib`: the folder to maintain dependencies
 
 ___
 ## Dependency Management
