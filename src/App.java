@@ -17,9 +17,15 @@ class Chapter2 {
     }
 
     // Chapter 2 Milestone 2 method
-    void milestone2(double num1) {
-        System.out.println((int) num1);
-        System.out.println((int) ((num1 - (int) num1) * 100));
+    // void milestone2(double num1) {
+    void milestone2(Scanner scanner) {
+
+        System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
+        System.out.println();
+        double num1 = ValidInput.ValidDouble(scanner, "Please enter a decimal number:", "Invalid entry - please enter a number.");
+
+        System.out.println("'int' - " + (int) num1);
+        System.out.println("'dec' - " + (int)((num1 - (int) num1) * 100));
     }
 
     // Chapter 2 Milestone 2a - BigDecimal method
@@ -155,11 +161,14 @@ public class App {
         chapter2.milestone1(scanner);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 2 **");
-        System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
-        System.out.println("Please input a decimal number:");
-        double num2_2 = scanner.nextDouble();
+
+        // System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
+        // System.out.println("Please input a decimal number:");
+        // double num2_2 = scanner.nextDouble();
+
         // Call the Chapter 2 Milestone 2 method here
-        chapter2.milestone2(num2_2);
+        // chapter2.milestone2(num2_2);
+        chapter2.milestone2(scanner);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 2a - Big Decimal Version **");
         System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
