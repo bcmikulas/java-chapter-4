@@ -83,18 +83,16 @@ class Chapter2 {
 
 public class App {
     // Chapter 1 Milestone 1 method
-    // static void chapter1milestone1(double num1, double num2) {
     static void chapter1milestone1(Scanner scanner) {
 
         double firstNum, secondNum;
 
         // prompt the user for two numbers
-        System.out.println("Please enter two numbers: ");
-        System.out.println("Method will return the largest.");
+        System.out.println("Please enter two numbers and the program will return the largest.");
         firstNum = ValidInput.ValidDouble(scanner, "--1st number--", "Invalid Entry - please enter a decimal number.");
         secondNum = ValidInput.ValidDouble(scanner, "--2nd number--", "Invalid Entry - please enter a decimal number.");
 
-        System.out.print("\nLargest is: ");
+        System.out.print("\nThe Largest number is: ");
         if (firstNum > secondNum) {
             System.out.println(firstNum);
         } else {
@@ -105,14 +103,17 @@ public class App {
     // Chapter 1 Milestone 2 method
     static void chapter1milestone2(Scanner scanner) {
         System.out.println("Please enter two numbers and the program will return the average.");
-        double num1 = ValidInput.ValidDouble(scanner, "--1st number--", "Invalid Entry - please enter a whole number.");
-        double num2 = ValidInput.ValidDouble(scanner, "--2nd number--", "Invalid Entry - please enter a whole number.");
+        double num1 = ValidInput.ValidDouble(scanner, "--1st number--", "Invalid Entry - please enter a number.");
+        double num2 = ValidInput.ValidDouble(scanner, "--2nd number--", "Invalid Entry - please enter a number.");
 
-        System.out.println("The average is: " + String.format("%,.2f", (num1 + num2) / 2.0));        
+        System.out.println("The average is: " + String.format("%,.2f", (num1 + num2) / 2.0));
     }
 
     // Chapter 1 Milestone 3 method
-    static void chapter1milestone3(double radius) {
+    static void chapter1milestone3(Scanner scanner) {
+        System.out.println("Enter a value for radius and the program will return circumference and area.");
+        double radius = ValidInput.ValidDouble(scanner, "Radius: ", "Invalid entry - please enter a number.");
+
         double circumference;
         double area;
         double pi = 3.14;
@@ -122,7 +123,6 @@ public class App {
         area = pi * radius * radius;
         System.out.println("Circumference: " + String.format("%.2f", circumference));
         System.out.println("Area: " + String.format("%.2f", area));
-        System.out.println();
     }
 
     public static void main(String[] args) throws Exception {
@@ -138,10 +138,8 @@ public class App {
         chapter1milestone2(scanner);
 
         System.out.println("\n** CHAPTER 1 MILESTONE 3 **");
-        System.out.print("Enter a radius: ");
-        double radius = scanner.nextDouble();
-        // Call the Chapter 1 Milestone 3 method here
-        chapter1milestone3(radius);
+        // Call the Chapter 1 Milestone 3 method
+        chapter1milestone3(scanner);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 1 **");
         System.out.println("Enter a Number:");
