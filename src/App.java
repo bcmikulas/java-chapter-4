@@ -3,7 +3,13 @@ import java.math.RoundingMode;
 import java.util.Scanner;
 
 class Chapter2 {
-    void milestone1(int num) {
+    // void milestone1(int num) {
+    void milestone1(Scanner scanner) {        
+        System.out.println("Enter a whole number to find out if it is odd or even:");
+        int num = ValidInput.ValidInteger(scanner, "Number: ", "Invalid entry - please enter a whole number.");
+        // int num2_1 = scanner.nextInt();
+
+        System.out.print("The number " + num + " is ");
         if (num % 2 == 0)
             System.out.println("Even");
         else
@@ -141,12 +147,12 @@ public class App {
         // Call the Chapter 1 Milestone 3 method
         chapter1milestone3(scanner);
 
-        System.out.println("\n** CHAPTER 2 MILESTONE 1 **");
-        System.out.println("Enter a Number:");
-        int num2_1 = scanner.nextInt();
-        // Call the Chapter 2 Milestone 1 method here
+        // create Chapter2 object to be used in next 4 milestones
         Chapter2 chapter2 = new Chapter2();
-        chapter2.milestone1(num2_1);
+
+        System.out.println("\n** CHAPTER 2 MILESTONE 1 **");
+        // Call the Chapter 2 Milestone 1 method
+        chapter2.milestone1(scanner);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 2 **");
         System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");

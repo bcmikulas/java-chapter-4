@@ -21,7 +21,7 @@ public class ValidInput {
         return validNum;
     }
          // helper method ValidDouble - validates user input for a valid integer
-    public static double ValidInteger(Scanner scanner, String prompt, String error) {
+    public static int ValidInteger(Scanner scanner, String prompt, String error) {
         String numStr; // userinput
         int validNum;
 
