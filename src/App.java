@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 class Chapter2 {
     // void milestone1(int num) {
-    void milestone1(Scanner scanner) {        
+    void milestone1(Scanner scanner) {
         System.out.println("Enter a whole number to find out if it is odd or even:");
         int num = ValidInput.ValidInteger(scanner, "Number: ", "Invalid entry - please enter a whole number.");
         // int num2_1 = scanner.nextInt();
@@ -21,26 +21,30 @@ class Chapter2 {
 
         System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
         System.out.println();
-        double num1 = ValidInput.ValidDouble(scanner, "Please enter a decimal number:", "Invalid entry - please enter a number.");
+        double num1 = ValidInput.ValidDouble(scanner, "Please enter a decimal number:",
+                "Invalid entry - please enter a number.");
 
         System.out.println("'int' - " + (int) num1);
-        System.out.println("'dec' - " + (int)((num1 - (int) num1) * 100));
+        System.out.println("'dec' - " + (int) ((num1 - (int) num1) * 100));
     }
 
     // Chapter 2 Milestone 2a - BigDecimal method
-    void milestone2a(BigDecimal num1) {
+    void milestone2a(Scanner scanner) {
+        System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
+        System.out.println("Please input a decimal number:");
+        BigDecimal num1 = scanner.nextBigDecimal();
         BigDecimal num2;
         BigDecimal num3;
 
         // show the integer portion of number
-        System.out.println(num1.intValue());
+        System.out.println("'int' - " + num1.intValue());
         // show only the 1st 2 decimal positions
         // move decimal point 2 to the right and remove the rest of the decimals
         num2 = num1.movePointRight(2).setScale(0, RoundingMode.DOWN);
         // remove all decimals then move decimal point 2 to the right - makes 2 digits
         // on leftside of decimal 0s
         num3 = num1.setScale(0, RoundingMode.DOWN).movePointRight(2);
-        System.out.println(num2.subtract(num3));
+        System.out.println("'dec' - " + num2.subtract(num3));
     }
 
     // Chapter 2 Milestone 3 method
@@ -67,19 +71,22 @@ class Chapter2 {
     }
 
     // Chapter 2 Milestone 4 method
-    void milestone4(int numSeconds) {
+    void milestone4(Scanner scanner) {
+        System.out.println("Enter a number of seconds to convert to days, hours, minutes, and seconds.");
+        int seconds = ValidInput.ValidInteger(scanner, "Seconds: ", "Invalid entry - please enter a whole number.");
+
         int secondsInYear = (60 * 60 * 24 * 365);
         int secondsInDay = (60 * 60 * 24);
         int secondsInHour = (60 * 60);
 
-        int years = numSeconds / secondsInYear;
-        int daySeconds = numSeconds % secondsInYear;
+        int years = seconds / secondsInYear;
+        int daySeconds = seconds % secondsInYear;
         int days = daySeconds / secondsInDay;
         int hourSeconds = daySeconds % secondsInDay;
         int hours = hourSeconds / secondsInHour;
         int minuteSeconds = hourSeconds % secondsInHour;
         int minutes = minuteSeconds / 60;
-        int seconds = minuteSeconds % 60;
+        seconds = minuteSeconds % 60;
 
         // 60 sec 60 min 24 hours 365 days
         System.out.println("Years: " + years);
@@ -140,6 +147,9 @@ public class App {
         // create scanner object for method calls to use
         Scanner scanner = new Scanner(System.in);
 
+        // create Chapter2 object to be used in the Chapter 2 milestones
+        Chapter2 chapter2 = new Chapter2();
+
         System.out.println("** CHAPTER 1 MILESTONE 1 **");
         // Call the Chapter 1 Milestone 1 method
         chapter1milestone1(scanner);
@@ -152,9 +162,6 @@ public class App {
         // Call the Chapter 1 Milestone 3 method
         chapter1milestone3(scanner);
 
-        // create Chapter2 object to be used in next 4 milestones
-        Chapter2 chapter2 = new Chapter2();
-
         System.out.println("\n** CHAPTER 2 MILESTONE 1 **");
         // Call the Chapter 2 Milestone 1 method
         chapter2.milestone1(scanner);
@@ -164,21 +171,16 @@ public class App {
         chapter2.milestone2(scanner);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 2a - Big Decimal Version **");
-        System.out.println("Returns the \'int\' portion of given number and the 1st 2 decimal positions.");
-        System.out.println("Please input a decimal number:");
-        BigDecimal num2_2a = scanner.nextBigDecimal();
         // Call the Chapter 2 Milestone 2 method
-        chapter2.milestone2a(num2_2a);
+        chapter2.milestone2a(scanner);
 
         System.out.println("\n** CHAPTER 2 MILESTONE 3 **");
         // Call the Chapter 2 Milestone 3 method
         chapter2.milestone3();
 
         System.out.println("\n** CHAPTER 2 MILESTONE 4 **");
-        System.out.println("Enter a number of seconds:");
-        int seconds = scanner.nextInt();
         // Call the Chapter 2 Milestone 4 method
-        chapter2.milestone4(seconds);
+        chapter2.milestone4(scanner);
 
         // create Chapter3 object
         Chapter3 chapter3 = new Chapter3();
