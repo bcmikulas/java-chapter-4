@@ -90,6 +90,7 @@ public class App {
 
         // prompt the user for two numbers
         System.out.println("Please enter two numbers: ");
+        System.out.println("Method will return the largest.");
         firstNum = ValidInput.ValidDouble(scanner, "--1st number--", "Invalid Entry - please enter a decimal number.");
         secondNum = ValidInput.ValidDouble(scanner, "--2nd number--", "Invalid Entry - please enter a decimal number.");
 
@@ -102,9 +103,12 @@ public class App {
     }
 
     // Chapter 1 Milestone 2 method
-    static void chapter1milestone2(double num1, double num2) {
-        System.out.println("The average is: " + String.format("%,.2f", (num1 + num2) / 2.0));
-        System.out.println();
+    static void chapter1milestone2(Scanner scanner) {
+        System.out.println("Please enter two numbers and the program will return the average.");
+        double num1 = ValidInput.ValidDouble(scanner, "--1st number--", "Invalid Entry - please enter a whole number.");
+        double num2 = ValidInput.ValidDouble(scanner, "--2nd number--", "Invalid Entry - please enter a whole number.");
+
+        System.out.println("The average is: " + String.format("%,.2f", (num1 + num2) / 2.0));        
     }
 
     // Chapter 1 Milestone 3 method
@@ -130,11 +134,8 @@ public class App {
         chapter1milestone1(scanner);
 
         System.out.println("\n** CHAPTER 1 MILESTONE 2 **");
-        System.out.println("Please enter two numbers:");
-        double num1_2a = scanner.nextDouble();
-        double num1_2b = scanner.nextDouble();
         // Call the Chapter 1 Milestone 2 method
-        chapter1milestone2(num1_2a, num1_2b);
+        chapter1milestone2(scanner);
 
         System.out.println("\n** CHAPTER 1 MILESTONE 3 **");
         System.out.print("Enter a radius: ");
