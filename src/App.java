@@ -83,14 +83,22 @@ class Chapter2 {
 
 public class App {
     // Chapter 1 Milestone 1 method
-    static void chapter1milestone1(double num1, double num2) {
-        System.out.print("Largest is: ");
-        if (num1 > num2) {
-            System.out.println(num1);
+    // static void chapter1milestone1(double num1, double num2) {
+    static void chapter1milestone1(Scanner scanner) {
+
+        double firstNum, secondNum;
+
+        // prompt the user for two numbers
+        System.out.println("Please enter two numbers: ");
+        firstNum = ValidInput.ValidDouble(scanner, "--1st number--", "Invalid Entry - please enter a decimal number.");
+        secondNum = ValidInput.ValidDouble(scanner, "--2nd number--", "Invalid Entry - please enter a decimal number.");
+
+        System.out.print("\nLargest is: ");
+        if (firstNum > secondNum) {
+            System.out.println(firstNum);
         } else {
-            System.out.println(num2);
+            System.out.println(secondNum);
         }
-        System.out.println();
     }
 
     // Chapter 1 Milestone 2 method
@@ -114,20 +122,18 @@ public class App {
     }
 
     public static void main(String[] args) throws Exception {
+        // create scanner object for method calls to use
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("** CHAPTER 1 MILESTONE 1 **");
-        System.out.println("Please enter two numbers:");
-        double num1_1a = scanner.nextDouble();
-        double num1_1b = scanner.nextDouble();
-        // Call the Chapter 1 Milestone 1 method here
-        chapter1milestone1(num1_1a, num1_1b);
+        // Call the Chapter 1 Milestone 1 method
+        chapter1milestone1(scanner);
 
         System.out.println("\n** CHAPTER 1 MILESTONE 2 **");
         System.out.println("Please enter two numbers:");
         double num1_2a = scanner.nextDouble();
         double num1_2b = scanner.nextDouble();
-        // Call the Chapter 1 Milestone 2 method here
+        // Call the Chapter 1 Milestone 2 method
         chapter1milestone2(num1_2a, num1_2b);
 
         System.out.println("\n** CHAPTER 1 MILESTONE 3 **");
@@ -167,25 +173,19 @@ public class App {
         // Call the Chapter 2 Milestone 4 method
         chapter2.milestone4(seconds);
 
-
         // create Chapter3 object
         Chapter3 chapter3 = new Chapter3();
 
         System.out.println("\n** CHAPTER 3 MILESTONE 1 **");
-        // System.out.println("Enter two numbers:");
-        // int num3_1a = scanner.nextInt();
-        // int num3_1b = scanner.nextInt();
-        // Call the Chapter 3 Milestone 1 method
-        // chapter3.Milestone1(num3_1a, num3_1b);
+        // Call the Chapter 3 Milestone1 method
         chapter3.Milestone1(scanner);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 2 **");
-        // Call the Chapter 3 Milestone 2 method
-        // method and all code is in the method in Chapter3.java
+        // Call the Chapter 3 Milestone2 method
         chapter3.Milestone2(scanner);
 
         System.out.println("\n** CHAPTER 3 MILESTONE 3 **");
-        // Call the Chapter 3 Milestone 3 method
+        // Call the Chapter 3 Milestone3 method
         chapter3.Milestone3(scanner);
 
         scanner.close();

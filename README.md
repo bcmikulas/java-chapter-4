@@ -1,6 +1,6 @@
 ## Java-1 Chapter 4 for Barry Mikulas
 
-This homework for chapter 4 moves milestones created for previous chapters into classes as described below.
+This homework for chapter 4 moves milestones created for previous chapters into classes and methods as described below.
 
 ___
 ## Instructions
