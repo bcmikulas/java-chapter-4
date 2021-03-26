@@ -5,7 +5,7 @@ This homework for chapter 4 moves milestones created for previous chapters into 
 ___
 ## Instructions
 
-Make a fork of this repository: "https://github.com/mlhaus/java-chapter-4" [here](https://github.com/mlhaus/java-chapter-4).
+Make a fork of this repository: https://github.com/mlhaus/java-chapter-4.
 
 Clone a copy to your computer.
 
